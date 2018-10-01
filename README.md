@@ -1,5 +1,5 @@
 ## Pig Dice
-Pig dice is a jeopardy dice games, this means that the dominant type of decision is whether or not to jeopardize previous gains by rolling for potential greater gains. players take turns to role th…
+Pig dice is a  jeopardy dice games, this means that the dominant type of decision is whether or not to jeopardize previous gains by rolling for potential greater gains. players take turns to role the dice,you can score with a 2,3,4,5 & a 6 and have a chance to role the dice again,but if you get 1,you loose all your previous gains,hence the big question is:TO ROLE OR NOT TO ROLE?!
 
 # BDD
 ## The Program recognizes when not all questions are answered;
