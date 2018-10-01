@@ -1,27 +1,30 @@
 
+window.addEventListener( 'DOMContentLoaded', function () {
+	
+  const buttonRoolDice = document.querySelector( '.dice-roll' );
 
-var dice = {
-    sides: 6,
-    roll: function () {
-      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-      return randomNumber;
-    }
+  function rollDice () {
+
+      const diceSide1 = document.getElementById( 'dice-side-1' );
+      const diceSide2 = document.getElementById( 'dice-side-2' );
+      const status = document.getElementById( 'status' );
+
+      const side1 = Math.floor( Math.random() * 6 ) + 1;
+      const side2 = Math.floor( Math.random() * 6 ) + 1;
+      const diceTotal = side1 + side2;
+
+      diceSide1.innerHTML = side1;
+      diceSide2.innerHTML = side2;
+
+      status.innerHTML = 'You rolled ' + diceTotal + '.';
+
+      if ( side1 === side2 ) {
+          status.innerHTML += ' Doubles! You get a free turn!';
+      }
   }
-  
-  
-  
-  //Prints dice roll to the page
-  
-  function printNumber(number) {
-    var placeholder = document.getElementById('placeholder');
-    placeholder.innerHTML = number;
-  }
-  
-  var button = document.getElementById('button');
-  
-  button.onclick = function() {
-    var result = dice.roll();
-    printNumber(result);
-  };
-  
-  
+
+  buttonRoolDice.addEventListener( 'click', rollDice, false );
+
+}, false);      
+        
+     
